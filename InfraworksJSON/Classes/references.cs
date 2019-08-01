@@ -8,11 +8,11 @@ namespace InfraworksJSON.Classes
 {
     public class references
     {
-        public references(string def, List<paramOverrides> paramOverrides, attachment <references> attachments)
+        public references(string def, List<paramOverrides> paramOverrides, attachment attachment)
         {
             this.def = def;
             this.paramOverrides = paramOverrides;
-            this.attachments = attachments;
+            this.attachment = attachment;
         }
 
         public string def { get; set; }

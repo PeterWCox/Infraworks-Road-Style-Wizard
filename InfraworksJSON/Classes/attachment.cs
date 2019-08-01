@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfraworksJSON
 {
-    class attachment
+    public class attachment
     {
         public attachment(int point, int ex_comp, int ex_point)
         {
