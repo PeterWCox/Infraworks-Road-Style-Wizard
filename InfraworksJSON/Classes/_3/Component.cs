@@ -1,10 +1,12 @@
-﻿using System;
+﻿using InfraworksJSON.Classes._4;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraworksJSON.Classes
+namespace InfraworksJSON.Classes._3
 {
     public class Component
     {
@@ -14,7 +16,10 @@ namespace InfraworksJSON.Classes
         public string category { get; set; }
         public bool showMarking { get; set; }
         public int revision { get; set; }
-        public List<references> references {get; set; }
-
+        public List<references> references {get; set;}
     }
+
+
+
+
 }

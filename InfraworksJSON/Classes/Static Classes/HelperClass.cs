@@ -1,4 +1,5 @@
 ﻿using InfraworksJSON.Classes;
+using InfraworksJSON.Classes._6;
 using System;
 using System.Collections.Generic;
 using System.Linq;

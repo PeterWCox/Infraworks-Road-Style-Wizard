@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraworksJSON
+namespace InfraworksJSON._5
 {
     public class attachment
     {
