@@ -8,10 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraworksJSON.StaticClasses
+namespace InfraworksClassLibrary.Helpers
 {
     public static class HelperClass
     {
+        public static string laneName = "ComponentDefinition/Lane";
+        public static string shoulderName = "ComponentDefinition/Shoulder";
+
         public static paramOverrides GenerateLeftSideFactorParamOverrides()
         {
             return new paramOverrides("LeftSideFactor", -1);
@@ -58,9 +61,6 @@ namespace InfraworksJSON.StaticClasses
             references lane = new references(materialType, null, paramOverrides);
             return lane;
         }
-
-
-
 
     }
 }

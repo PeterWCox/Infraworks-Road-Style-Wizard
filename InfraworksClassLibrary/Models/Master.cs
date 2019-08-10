@@ -10,17 +10,21 @@ namespace InfraworksJSON.Classes._1
 {
     public class Master
     {
-        public Master(string city_name, string session_id, Dictionary<string, Component> assemblyDictionary)
+        public Master()
         {
-            this.city_name = city_name;
-            this.session_id = session_id;
-            AssemblyDictionary = assemblyDictionary;
+
         }
 
         public string city_name { get; set; }
         public string session_id { get; set; }
 
         [JsonProperty("styles")]
-        public Dictionary<string, Component> AssemblyDictionary { get; set; }
+        private Dictionary<string, Component> AssemblyDictionary = new Dictionary<string, Component>();
+
+        public void AddComponent(string name, Component component)
+        {
+            AssemblyDictionary.Add(name, component);
+        }
+
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksJSON", "Infrawork
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksClassLibrary", "InfraworksClassLibrary\InfraworksClassLibrary.csproj", "{3C545B57-01AD-4DAD-B781-011FD49EFBCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksJSONFrontEnd", "InfraworksJSONFrontEnd\InfraworksJSONFrontEnd.csproj", "{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3C545B57-01AD-4DAD-B781-011FD49EFBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C545B57-01AD-4DAD-B781-011FD49EFBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C545B57-01AD-4DAD-B781-011FD49EFBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
