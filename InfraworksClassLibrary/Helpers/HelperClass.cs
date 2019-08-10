@@ -26,17 +26,23 @@ namespace InfraworksJSON.StaticClasses
         {
             List<paramOverrides> paramOverrides = new List<paramOverrides>();
 
-            //Set up width paramOverride 
-            //if isLHS = true, add LHS paramOverrides        
-            if (isLHS) { paramOverrides.Add(GenerateLeftSideFactorParamOverrides()); }
-            paramOverrides.Add(GenerateWidthParamOverrides(width));
+            //If breadth = 0 return null;
+            if (width == 0) { return null; }
+            else
+            {
+                //if isLHS = true, add LHS paramOverrides 
+                if (isLHS) { paramOverrides.Add(GenerateLeftSideFactorParamOverrides()); }
 
-            //Set attachment parameters 
-            attachment attachment = new attachment(0, ex_point, 1);
+                // Set up width paramOverride
+                paramOverrides.Add(GenerateWidthParamOverrides(width));
 
-            //Create and return the reference object for the lane 
-            references lane = new references(materialType, attachment, paramOverrides);
-            return lane;
+                //Set attachment parameters 
+                attachment attachment = new attachment(0, ex_point, 1);
+
+                //Create and return the reference object for the lane 
+                references lane = new references(materialType, attachment, paramOverrides);
+                return lane;
+            }
         }
 
         public static references CreateReference(string materialType, double width, bool isLHS)
@@ -52,7 +58,6 @@ namespace InfraworksJSON.StaticClasses
             references lane = new references(materialType, null, paramOverrides);
             return lane;
         }
-
 
 
 

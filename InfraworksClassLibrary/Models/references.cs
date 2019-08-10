@@ -10,6 +10,10 @@ namespace InfraworksJSON.Classes._4
 {
     public class references
     {
+        public references()
+        {
+        }
+
         public references(string def, attachment attachment, List<paramOverrides> paramOverrides)
         {
             this.def = def;
@@ -20,6 +24,16 @@ namespace InfraworksJSON.Classes._4
         public string def { get; set; }
         public attachment attachment { get; set; }
         public List<paramOverrides> paramOverrides { get; set; }
+
+        public void PrintReferenceData()
+        {
+            if (attachment != null)
+            {
+
+            }
+
+            
+        }
 
     }
 }

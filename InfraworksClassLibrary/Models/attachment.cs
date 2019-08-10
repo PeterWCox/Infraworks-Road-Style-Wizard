@@ -17,7 +17,7 @@ namespace InfraworksJSON._5
 
         public int point { get; set; }
 
-        public int ex_comp { get; set; }
+        public int? ex_comp { get; set; }
 
         public int ex_point { get; set; }
     }
