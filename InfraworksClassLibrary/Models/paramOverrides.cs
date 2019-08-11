@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraworksJSON.Classes._6
+namespace InfraworksClassLibrary.Models
 {
     public class paramOverrides
     {

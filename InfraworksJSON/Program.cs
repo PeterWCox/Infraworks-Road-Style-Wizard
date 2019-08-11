@@ -1,9 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using InfraworksClassLibrary.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using InfraworksJSON.Classes._3;
-using InfraworksJSON.Classes._1;
 using static InfraworksClassLibrary.Helpers.CrossSections;
 
 namespace InfraworksJSON
@@ -17,7 +16,8 @@ namespace InfraworksJSON
             string fileName = @"C:\Users\pcox\Desktop\C#TestFilesNEWWWW.styles.json";
 
             //Add each component to the styles dictionary
-            var stylesDictionary = new Dictionary<string, Component>()
+            //TODO fix confilict with System.Component as bad C# Practice
+            var stylesDictionary = new Dictionary<string, component>()
              {
                 { "Component/Custom/TC01-SingleCW", Test1_SingleCwWith2mVerges()},
                 { "Component/Custom/TC02-DualCWWithCentralRes", Test2_DualCwWith2mVerges()},

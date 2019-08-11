@@ -1,12 +1,11 @@
-﻿using InfraworksJSON.Classes._3;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraworksJSON.Classes._1
+namespace InfraworksClassLibrary.Models
 {
     public class Master
     {
@@ -19,9 +18,9 @@ namespace InfraworksJSON.Classes._1
         public string session_id { get; set; }
 
         [JsonProperty("styles")]
-        private Dictionary<string, Component> AssemblyDictionary = new Dictionary<string, Component>();
+        private Dictionary<string, component> AssemblyDictionary = new Dictionary<string, component>();
 
-        public void AddComponent(string name, Component component)
+        public void AddComponent(string name, component component)
         {
             AssemblyDictionary.Add(name, component);
         }

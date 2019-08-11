@@ -1,5 +1,4 @@
 ﻿using InfraworksClassLibrary;
-using InfraworksJSON.Classes._4;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,9 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using static InfraworksClassLibrary.Helpers.HelperClass;
 
-namespace InfraworksJSON.Classes._3
+namespace InfraworksClassLibrary.Models
 {
-    public class Component
+
+    public class component
     {
         public string styleType { get; set; }
         public string name { get; set; }

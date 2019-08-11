@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksJSON", "InfraworksJSON\InfraworksJSON.csproj", "{DDCD00B1-F155-4760-8D97-665C993E0350}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksJSONConsole", "InfraworksJSON\InfraworksJSONConsole.csproj", "{DDCD00B1-F155-4760-8D97-665C993E0350}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksClassLibrary", "InfraworksClassLibrary\InfraworksClassLibrary.csproj", "{3C545B57-01AD-4DAD-B781-011FD49EFBCB}"
 EndProject

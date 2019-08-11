@@ -1,4 +1,4 @@
-﻿using InfraworksJSON.Classes._3;
+﻿using InfraworksClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +10,14 @@ namespace InfraworksClassLibrary.Helpers
 {
     public static class CrossSections
     {
-        public static Component Test1_SingleCwWith2mVerges()
+        public static component Test1_SingleCwWith2mVerges()
         {
             string roadName = "TC01-SingleCW";
             int revision = 1;
             string description = "Single 7.3m carriageway with 2m Verges.";
             bool showMarking = true;
 
-            Component c = new Component();
+            component c = new component();
 
             c.AddComponent(laneName, 3.65, true);
             c.AddComponent(shoulderName, 2, true);
@@ -34,14 +34,14 @@ namespace InfraworksClassLibrary.Helpers
             return c;
         }
 
-        public static Component Test2_DualCwWith2mVerges()
+        public static component Test2_DualCwWith2mVerges()
         {
             int revision = 1;
             string roadName = "TC01-SingleCW";
             string description = "Single 7.3m carriageway with 2m Verges.";
             bool showMarking = true;
 
-            Component c = new Component();
+            component c = new component();
 
             c.AddComponent(shoulderName, 1.25, true);
             c.AddComponent(laneName, 3.65, true);
