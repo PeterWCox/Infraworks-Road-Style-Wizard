@@ -8,7 +8,7 @@ using static InfraworksClassLibrary.Helpers.HelperClass;
 
 namespace InfraworksClassLibrary.Helpers
 {
-    public static class CrossSections
+    public static class TestCrossSections
     {
         public static component Test1_SingleCwWith2mVerges()
         {

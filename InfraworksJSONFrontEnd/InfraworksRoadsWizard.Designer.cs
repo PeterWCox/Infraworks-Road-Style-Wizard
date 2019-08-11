@@ -1,6 +1,6 @@
 ﻿namespace InfraworksJSONFrontEnd
 {
-    partial class Form1
+    partial class InfraworksRoadsWizard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfraworksRoadsWizard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvInputTable = new System.Windows.Forms.DataGridView();
@@ -53,14 +53,15 @@
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExportToJSON = new System.Windows.Forms.Button();
             this.btnImportFromExcel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCityName = new System.Windows.Forms.TextBox();
             this.txtJSONFileName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSessionID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbShowLaneMarkings = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtExcelFileName = new System.Windows.Forms.TextBox();
+            this.btnClearTable = new System.Windows.Forms.Button();
+            this.btnAddRow = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputTable)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(292, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,14 +80,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 102);
+            this.label1.Location = new System.Drawing.Point(12, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 22);
+            this.label1.Size = new System.Drawing.Size(222, 22);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Road Style Wizard ";
+            this.label1.Text = "Road Style Wizard V0.9";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dgvInputTable
             // 
+            this.dgvInputTable.AllowUserToAddRows = false;
             this.dgvInputTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInputTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -108,10 +111,11 @@
             this.Column17,
             this.Column18,
             this.Column19});
-            this.dgvInputTable.Location = new System.Drawing.Point(12, 171);
+            this.dgvInputTable.Location = new System.Drawing.Point(16, 117);
             this.dgvInputTable.Name = "dgvInputTable";
-            this.dgvInputTable.Size = new System.Drawing.Size(1101, 338);
+            this.dgvInputTable.Size = new System.Drawing.Size(1101, 240);
             this.dgvInputTable.TabIndex = 2;
+            this.dgvInputTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInputTable_CellContentClick);
             // 
             // Column1
             // 
@@ -245,7 +249,7 @@
             // 
             // btnExportToJSON
             // 
-            this.btnExportToJSON.Location = new System.Drawing.Point(16, 515);
+            this.btnExportToJSON.Location = new System.Drawing.Point(16, 363);
             this.btnExportToJSON.Name = "btnExportToJSON";
             this.btnExportToJSON.Size = new System.Drawing.Size(72, 64);
             this.btnExportToJSON.TabIndex = 3;
@@ -255,7 +259,7 @@
             // 
             // btnImportFromExcel
             // 
-            this.btnImportFromExcel.Location = new System.Drawing.Point(94, 515);
+            this.btnImportFromExcel.Location = new System.Drawing.Point(94, 363);
             this.btnImportFromExcel.Name = "btnImportFromExcel";
             this.btnImportFromExcel.Size = new System.Drawing.Size(72, 64);
             this.btnImportFromExcel.TabIndex = 3;
@@ -263,56 +267,22 @@
             this.btnImportFromExcel.UseVisualStyleBackColor = true;
             this.btnImportFromExcel.Click += new System.EventHandler(this.BtnImportFromExcel_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(321, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "City Name:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(321, 74);
+            this.label3.Location = new System.Drawing.Point(322, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "JSON FilePath:";
             // 
-            // txtCityName
-            // 
-            this.txtCityName.Location = new System.Drawing.Point(484, 18);
-            this.txtCityName.Name = "txtCityName";
-            this.txtCityName.Size = new System.Drawing.Size(100, 22);
-            this.txtCityName.TabIndex = 5;
-            this.txtCityName.Text = "HAL";
-            // 
             // txtJSONFileName
             // 
-            this.txtJSONFileName.Location = new System.Drawing.Point(484, 71);
+            this.txtJSONFileName.Location = new System.Drawing.Point(485, 17);
             this.txtJSONFileName.Name = "txtJSONFileName";
-            this.txtJSONFileName.Size = new System.Drawing.Size(361, 22);
+            this.txtJSONFileName.Size = new System.Drawing.Size(400, 22);
             this.txtJSONFileName.TabIndex = 5;
             this.txtJSONFileName.Text = "C:\\Users\\pcox\\Desktop\\C#Test.styles.json";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(321, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Session_ID:";
-            // 
-            // txtSessionID
-            // 
-            this.txtSessionID.Location = new System.Drawing.Point(484, 43);
-            this.txtSessionID.Name = "txtSessionID";
-            this.txtSessionID.Size = new System.Drawing.Size(275, 22);
-            this.txtSessionID.TabIndex = 5;
-            this.txtSessionID.Text = "{0D947B14-261F-4D54-AEC5-289040C67073}";
             // 
             // label5
             // 
@@ -325,7 +295,7 @@
             // cbShowLaneMarkings
             // 
             this.cbShowLaneMarkings.AutoSize = true;
-            this.cbShowLaneMarkings.Location = new System.Drawing.Point(324, 99);
+            this.cbShowLaneMarkings.Location = new System.Drawing.Point(325, 74);
             this.cbShowLaneMarkings.Name = "cbShowLaneMarkings";
             this.cbShowLaneMarkings.Size = new System.Drawing.Size(154, 20);
             this.cbShowLaneMarkings.TabIndex = 6;
@@ -333,28 +303,77 @@
             this.cbShowLaneMarkings.Text = "Show Lane Markings?";
             this.cbShowLaneMarkings.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(322, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Excel FilePath:";
+            // 
+            // txtExcelFileName
+            // 
+            this.txtExcelFileName.Location = new System.Drawing.Point(485, 43);
+            this.txtExcelFileName.Name = "txtExcelFileName";
+            this.txtExcelFileName.Size = new System.Drawing.Size(400, 22);
+            this.txtExcelFileName.TabIndex = 5;
+            this.txtExcelFileName.Text = "C:\\Users\\pcox\\Desktop\\InfraworksRoadStyleWizardInputFile.xlsm";
+            // 
+            // btnClearTable
+            // 
+            this.btnClearTable.Location = new System.Drawing.Point(253, 363);
+            this.btnClearTable.Name = "btnClearTable";
+            this.btnClearTable.Size = new System.Drawing.Size(75, 64);
+            this.btnClearTable.TabIndex = 7;
+            this.btnClearTable.Text = "Clear Table";
+            this.btnClearTable.UseVisualStyleBackColor = true;
+            this.btnClearTable.Click += new System.EventHandler(this.BtnClearTable_Click);
+            // 
+            // btnAddRow
+            // 
+            this.btnAddRow.Location = new System.Drawing.Point(172, 363);
+            this.btnAddRow.Name = "btnAddRow";
+            this.btnAddRow.Size = new System.Drawing.Size(75, 64);
+            this.btnAddRow.TabIndex = 7;
+            this.btnAddRow.Text = "Add Row";
+            this.btnAddRow.UseVisualStyleBackColor = true;
+            this.btnAddRow.Click += new System.EventHandler(this.BtnAddRow_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(685, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Road CL";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
+            // 
+            // InfraworksRoadsWizard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1227, 591);
+            this.ClientSize = new System.Drawing.Size(1126, 436);
+            this.Controls.Add(this.btnAddRow);
+            this.Controls.Add(this.btnClearTable);
             this.Controls.Add(this.cbShowLaneMarkings);
+            this.Controls.Add(this.txtExcelFileName);
             this.Controls.Add(this.txtJSONFileName);
-            this.Controls.Add(this.txtSessionID);
-            this.Controls.Add(this.txtCityName);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnImportFromExcel);
             this.Controls.Add(this.btnExportToJSON);
             this.Controls.Add(this.dgvInputTable);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "InfraworksRoadsWizard";
             this.Text = "Infraworks Road Component Wizard ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputTable)).EndInit();
@@ -389,14 +408,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.Button btnExportToJSON;
         private System.Windows.Forms.Button btnImportFromExcel;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCityName;
         private System.Windows.Forms.TextBox txtJSONFileName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSessionID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton cbShowLaneMarkings;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtExcelFileName;
+        private System.Windows.Forms.Button btnClearTable;
+        private System.Windows.Forms.Button btnAddRow;
+        private System.Windows.Forms.Label label2;
     }
 }
 
