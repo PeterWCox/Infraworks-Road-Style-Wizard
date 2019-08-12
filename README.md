@@ -16,6 +16,11 @@ It should go without saying, but the LSP is not endorsed by Autodesk!
 
 If you have any feedback, find any bugs or have suggestions for future improvements drop me a line at support@eurocodehelpers.com 
 
+****V2.0 Ideas****
+
+1. Option to add barriers.
+2. Lane/Verge gradient options.
+
 Happy modelling!
 
 
