@@ -16,7 +16,7 @@ namespace InfraworksJSONFrontEnd
         public InfraworksRoadsWizard()
         {
             InitializeComponent();
-        }    
+        }
 
         private void BtnExportToJSON_Click(object sender, EventArgs e)
         {
@@ -54,9 +54,9 @@ namespace InfraworksJSONFrontEnd
                          $"Please do not leave any blank/empty cells - if a width of 0m is required then use a value of 0 rather than leaving" +
                          $" it empty.");
                         return;
-                    }                  
+                    }
                 }
-                
+
                 //Verify that revision can be parsed otherwise send nagging msgbox and return void;
                 int revision;
                 bool revisionTryParse = Int32.TryParse(dgvInputTable.Rows[i].Cells[1].Value.ToString(), out revision);
@@ -129,7 +129,7 @@ namespace InfraworksJSONFrontEnd
                 c.name = roadName;
                 c.description = description;
                 c.category = "assembly";
-                c.showMarking = showLaneMarkings;   
+                c.showMarking = showLaneMarkings;
                 c.revision = revision;
                 c.AddListComponents(rm);
 
@@ -141,11 +141,11 @@ namespace InfraworksJSONFrontEnd
                Formatting.Indented,
                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
 
-            string fileName = txtJSONFileName.Text;
+            string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizard.styles.json";
 
-            File.WriteAllText(fileName, json);
+            File.WriteAllText(filePath, json);
 
-            MessageBox.Show($"JSON File Successfully Written to {fileName}.");
+            MessageBox.Show($"JSON File Successfully Written to {filePath}.");
         }
 
         private static double ParseDGVCellToDouble(DataGridView dgv, int row, int column)
@@ -172,7 +172,8 @@ namespace InfraworksJSONFrontEnd
             {
                 //Open up the excel workbook 
                 Excel.Application xlApp = new Excel.Application();
-                Excel._Workbook xlWorkbook = xlApp.Workbooks.Open(txtExcelFileName.Text);
+                string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizardInputFile.xlsm";
+                Excel._Workbook xlWorkbook = xlApp.Workbooks.Open(filePath);
                 Excel.Worksheet xlWorksheet = xlWorkbook.ActiveSheet;
 
                 //Convert the non-empty rows into datagridview rows 
@@ -197,7 +198,6 @@ namespace InfraworksJSONFrontEnd
                         Marshal.ReleaseComObject(xlApp);
                         break;
                     }
-
                     //Else add the row to the datagridview table
                     else
                     {
@@ -207,11 +207,11 @@ namespace InfraworksJSONFrontEnd
             }
             catch (Exception)
             {
-                MessageBox.Show("Excel file to import from not found or corrupted. Please check file is in the right condition as per sheet 2 and check" +
+                MessageBox.Show("Excel file to import from not found or corrupted. " +
+                    "Please check file is in the right condition as per sheet 2 and check" +
                     "the URL is valid and try again.");
                 return;
             }
-           
         }
 
         public static void RemoveAllRows(DataGridView dgv)

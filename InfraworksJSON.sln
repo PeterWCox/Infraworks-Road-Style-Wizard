@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksClassLibrary", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksJSONFrontEnd", "InfraworksJSONFrontEnd\InfraworksJSONFrontEnd.csproj", "{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CFE217EF-0868-4B85-95AC-F91B630E7E23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
