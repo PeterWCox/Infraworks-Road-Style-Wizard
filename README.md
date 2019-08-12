@@ -12,7 +12,7 @@ generated road-cross-sections but of course accidents do happen...
 
 Note: The program has only been tested on IW 2019 and 2020.
 
-It should go without saying, but the LSP is not endorsed by Autodesk!
+It should go without saying, but the wizard is not endorsed by Autodesk!
 
 If you have any feedback, find any bugs or have suggestions for future improvements drop me a line at support@eurocodehelpers.com 
 
