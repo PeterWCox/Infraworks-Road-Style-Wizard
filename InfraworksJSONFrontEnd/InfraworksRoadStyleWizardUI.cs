@@ -3,6 +3,7 @@ using InfraworksClassLibrary.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -11,9 +12,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace InfraworksJSONFrontEnd
 {
-    public partial class InfraworksRoadsWizard : Form
+    public partial class InfraworksRoadStyleWizardUI : Form
     {
-        public InfraworksRoadsWizard()
+        public InfraworksRoadStyleWizardUI()
         {
             InitializeComponent();
         }
@@ -26,7 +27,19 @@ namespace InfraworksJSONFrontEnd
                 MessageBox.Show("Table does not have any rows - JSON file cannot be exported. Please check input and try again.");
                 return;
             }
-
+            
+            //Remove any empty cellsthe datagridview
+            foreach (DataGridViewRow rw in dgvInputTable.Rows)
+            {
+                for (int k = 0; k < rw.Cells.Count; k++)
+                {
+                    if (rw.Cells[k].Value == null || rw.Cells[k].Value == DBNull.Value || String.IsNullOrWhiteSpace(rw.Cells[k].Value.ToString()))
+                    {
+                        MessageBox.Show("Empty/null cells detected- please do not leave any cells blank or empty.");
+                        return;
+                    }
+                }
+            }
 
             //Create the main object 
             Master m = new Master();
@@ -79,6 +92,8 @@ namespace InfraworksJSONFrontEnd
                         return;
                     }
                 }
+
+
 
                 //Start keying up the reference model objects based on the data in the newly validated
                 //dgv 
@@ -141,7 +156,7 @@ namespace InfraworksJSONFrontEnd
                Formatting.Indented,
                new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
 
-            string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizard.styles.json";
+            string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizard_V1.0.styles.json";
 
             File.WriteAllText(filePath, json);
 
@@ -172,7 +187,7 @@ namespace InfraworksJSONFrontEnd
             {
                 //Open up the excel workbook 
                 Excel.Application xlApp = new Excel.Application();
-                string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizardInputFile.xlsm";
+                string filePath = Directory.GetCurrentDirectory() + "\\InfraworksRoadStyleWizardInputFile_V1.0.xlsm";
                 Excel._Workbook xlWorkbook = xlApp.Workbooks.Open(filePath);
                 Excel.Worksheet xlWorksheet = xlWorkbook.ActiveSheet;
 
@@ -314,6 +329,19 @@ namespace InfraworksJSONFrontEnd
         private void Label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnLink_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.eurocodehelpers.com");
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvInputTable.SelectedRows)
+            {
+                dgvInputTable.Rows.RemoveAt(row.Index);
+            }
         }
     }
 }

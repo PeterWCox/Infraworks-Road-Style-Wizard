@@ -16,7 +16,7 @@ namespace InfraworksJSONFrontEnd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InfraworksRoadsWizard());
+            Application.Run(new InfraworksRoadStyleWizardUI());
         }
     }
 }
