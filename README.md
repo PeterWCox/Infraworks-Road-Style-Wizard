@@ -3,6 +3,8 @@
 An (unofficial) program developed in C# that helps Autodesk Infraworks (IW) users mass-produce road cross-sections without relying on the cumbersome manual
 process using IW's GUI. 
 
+![Software Screenshot](https://i.ibb.co/z5KQHz5/screenshot.png[/url])
+
 The program allows users to specify road cross-sections either via the GUI tabular input or direct import via an Excel file. 
 The program then produces a styles.json file which can be readily imported into Infraworks. 
 
