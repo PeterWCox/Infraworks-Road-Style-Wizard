@@ -1,18 +1,19 @@
-# Infraworks-Road-Style-Wizard
+# Infraworks Road Style Wizard
 
-An (unofficial) program developed in C# that helps Autodesk Infraworks (IW) users mass-produce road cross-sections without relying on the cumbersome manual
-process using IW's GUI. 
+A simple application for Infraworks (IW) that:
+
+1. Provides a method to create road-styles using a tabular interface
+2. Allows sharing road style templates between models. 
 
 ![Software Screenshot](https://i.ibb.co/z5KQHz5/screenshot.png[/url])
 
-The program allows users to specify road cross-sections either via the GUI tabular input or direct import via an Excel file. 
-The program then produces a styles.json file which can be readily imported into Infraworks. 
+Hopefully this application will help IW modellers reduce the amount of time spent manually creating road-sections using the cumbersome GUI
 
-Please refer to the included manual for a ful description on how to use the program. If the tool is of interest please do a test-run on 
-a new/non-project critical model to satsify yourself that the tool is up to the job. The tool went quite a bit of testing via randomly
-generated road-cross-sections but of course accidents do happen...
+Please refer to the included manual for a full description on how to use the program included worked examples. 
 
-Note: The program has only been tested on IW 2019 and 2020.
+Although the application underwent a lot of testing, It is strongly recommended that users of the program do a test-run on a non-critical model file to satisfy themselves that the tool works as described.  
+
+The program has only been tested on IW 2019 and 2020.
 
 If you have any feedback, find any bugs or have suggestions for future improvements drop me a line at support@eurocodehelpers.com 
 
