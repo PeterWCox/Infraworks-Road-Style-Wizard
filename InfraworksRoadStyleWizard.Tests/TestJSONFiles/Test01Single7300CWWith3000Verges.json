@@ -1,0 +1,68 @@
+{
+  "styles": {
+    "Component/Custom/Single Carriageway": {
+      "references": [
+        {
+          "def": "ComponentDefinition/Lane",
+          "paramOverrides": [
+            {
+              "name": "LeftSideFactor",
+              "value": -1.0
+            },
+            {
+              "name": "Width",
+              "value": 3.65
+            }
+          ]
+        },
+        {
+          "def": "ComponentDefinition/Shoulder",
+          "attachment": {
+            "point": 0,
+            "ex_comp": 0,
+            "ex_point": 1
+          },
+          "paramOverrides": [
+            {
+              "name": "LeftSideFactor",
+              "value": -1.0
+            },
+            {
+              "name": "Width",
+              "value": 3.0
+            }
+          ]
+        },
+        {
+          "def": "ComponentDefinition/Lane",
+          "paramOverrides": [
+            {
+              "name": "Width",
+              "value": 3.65
+            }
+          ]
+        },
+        {
+          "def": "ComponentDefinition/Shoulder",
+          "attachment": {
+            "point": 0,
+            "ex_comp": 2,
+            "ex_point": 1
+          },
+          "paramOverrides": [
+            {
+              "name": "Width",
+              "value": 3.0
+            }
+          ]
+        }
+      ],
+      "styleType": "Component",
+      "name": "Single Carriageway",
+      "description": "Single 7.3m Carriageway with 3m Verges",
+      "category": "assembly",
+      "showMarking": false,
+      "revision": 1
+    }
+  }
+}

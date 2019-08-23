@@ -138,7 +138,6 @@ namespace InfraworksJSONFrontEnd
                 new ReferenceModel(shoulderName, verge_RHS, false)
                 };
 
-                //TODO fix hardcoded reference for showmarking 
                 component c = new component();
                 c.styleType = "Component";
                 c.name = roadName;

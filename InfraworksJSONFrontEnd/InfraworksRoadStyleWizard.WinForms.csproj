@@ -70,9 +70,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="InfraworksRoadStyleWizardManual_V1.0.docx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="InfraworksRoadStyleWizardInputFile_V1.0.xlsm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -91,9 +88,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InfraworksClassLibrary\InfraworksRoadStyleWizardClassLibrary.csproj">
+    <ProjectReference Include="..\InfraworksClassLibrary\InfraworksRoadStyleWizard.Core.csproj">
       <Project>{3C545B57-01AD-4DAD-B781-011FD49EFBCB}</Project>
-      <Name>InfraworksRoadStyleWizardClassLibrary</Name>
+      <Name>InfraworksRoadStyleWizard.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

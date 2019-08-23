@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksRoadStyleWizardClassLibrary", "InfraworksClassLibrary\InfraworksRoadStyleWizardClassLibrary.csproj", "{3C545B57-01AD-4DAD-B781-011FD49EFBCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksRoadStyleWizard.Core", "InfraworksClassLibrary\InfraworksRoadStyleWizard.Core.csproj", "{3C545B57-01AD-4DAD-B781-011FD49EFBCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksRoadStyleWizardUI", "InfraworksJSONFrontEnd\InfraworksRoadStyleWizardUI.csproj", "{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksRoadStyleWizard.WinForms", "InfraworksJSONFrontEnd\InfraworksRoadStyleWizard.WinForms.csproj", "{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfraworksRoadStyleWizard.Tests", "InfraworksRoadStyleWizard.Tests\InfraworksRoadStyleWizard.Tests.csproj", "{87112F97-7387-4452-AB81-A1031A3E2A30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33FFB896-67D9-4E6A-83CC-1DF889B3CAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87112F97-7387-4452-AB81-A1031A3E2A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87112F97-7387-4452-AB81-A1031A3E2A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87112F97-7387-4452-AB81-A1031A3E2A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87112F97-7387-4452-AB81-A1031A3E2A30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
